@@ -2,7 +2,7 @@ import signal
 import sys
 import RPi.GPIO as GPIO
 
-BUTTON_GPIO = 16
+BUTTON_GPIO = 15
 
 def signal_handler(sig, frame):
     GPIO.cleanup()
