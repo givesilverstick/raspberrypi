@@ -10,11 +10,10 @@ GPIO.setup(button, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 
 try:
     while True:
-        if GPIO.input(button) == GPIO.HIGH:     # 스위치 핀이 HIGH이면
+        if GPIO.input(button) == GPIO.LOW:
             # GPIO.output(LCD, True)
-            mylcd.lcd_display_string("Push the button", 1)
-            mylcd.lcd_display_string("to select volume", 2)
-        else:                                   # 스위치 핀이 HIGH가 아니면
+            mylcd.lcd_display_string("set up to 50ml", 1)
+        else:
             GPIO.output(LCD, False)
 
 finally:
