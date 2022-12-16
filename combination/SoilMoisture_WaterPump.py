@@ -46,12 +46,12 @@ try:
     # time.sleep(delay)
     if (convertPercent(val) < 10):
       print(val, "/", convertPercent(val), "%", "\nhere - PUMP on")
-      GPIO.output(PUMP, 1)
-      time.sleep(2)
-      GPIO.output(PUMP, 0)
-      time.sleep(delay)
+      #GPIO.output(PUMP, 1)
+      #time.sleep(2)
+      #GPIO.output(PUMP, 0)
+      #time.sleep(delay)
     elif(convertPercent(val) >= 10):
-      GPIO.output(PUMP, 0)
+      #GPIO.output(PUMP, 0)
       print(val, "/", convertPercent(val), "%", "\nhere - PUMP off")
       time.sleep(2)
 except KeyboardInterrupt:

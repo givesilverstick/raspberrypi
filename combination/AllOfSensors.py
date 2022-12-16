@@ -59,7 +59,7 @@ GPIO.setup(volume_button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 # 풀다운 저항이 있으면 버튼을 누르지 않으면 LOW 신호가 됨
 # 여기를 GPIO.PUD_UP으로 하면 버튼을 누르지 않으면 HIGH 신호가 됨
 
-period_button = 6;  # 주기 버튼 GPIO핀 달기
+period_button = 6  # 주기 버튼 GPIO핀 달기
 GPIO.setup(period_button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 volume = ["100 (ml)", "150 (ml)", "200 (ml)", "250 (ml)"]
@@ -69,7 +69,7 @@ buttonClickCount_period = 0  # 0, 1, 2 인덱스 참조용
 
 
 # 주기 조절 버튼 P 눌렀을 때 주기 조절
-def period_button_callback(chanel):
+def period_button_callback(channel):
     global buttonClickCount_period
     print('주기 조절 버튼 누름')
     # 눌렀을 때
@@ -83,7 +83,7 @@ def period_button_callback(chanel):
 
 
 # 용량 조절 버튼 V 눌렀을 때 용량 조절
-def volume_button_callback(chanel):
+def volume_button_callback(channel):
     global buttonClickCount_volume
     print('용량 조절 버튼 누름')
     buttonClickCount_volume += 1
@@ -109,8 +109,8 @@ try:
         # time.sleep(delay)
         if (convertPercent(val) < water_percent_threshold):
             print(val, "/", convertPercent(val), "%", "\nhere - PUMP on")
-            mylcd.lcd_display_string("period: 124" , 1)
-            mylcd.lcd_display_string("period:234234 ", 2)
+            #mylcd.lcd_display_string("period: 124" , 1)
+            #mylcd.lcd_display_string("period:234234 ", 2)
             GPIO.output(PUMP, 1)
             time.sleep(2)
             GPIO.output(PUMP, 0)
