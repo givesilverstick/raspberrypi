@@ -6,7 +6,7 @@ import sys
 
 import spidev
 import I2C_LCD_driver                                              # 버튼 관련
-from hx711 import HX711                                            # hx711 설치해야함.
+from hx711 import HX711                                            # hx711
 import pickle
 import os
 
