@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from hx711 import HX711             # hx711 설치해야함.
+from hx711 import HX711             # hx711
 import pickle
 import os
 import time
